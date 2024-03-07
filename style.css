@@ -432,7 +432,7 @@ span {
     color: #555;
 }
 
-.content-education {
+.content1 {
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -440,18 +440,18 @@ span {
     background-color: var(--bg-color);
 }
 
-.content-education h3 {
+.content1 h3 {
     font-size: 24px;
     margin-bottom: 15px;
     color: var(--main-color); /* Ubah warna judul */
 }
 
-.content-education ul {
+.content1 ul {
     list-style-type: none;
     padding: 0;
 }
 
-.content-education li {
+.content1 li {
     margin-bottom: 10px;
     position: relative;
     padding-left: 40px; /* Sesuaikan jarak dari ikon */
@@ -459,7 +459,7 @@ span {
     color: #fff; /* Warna teks */
 }
 
-.content-education li:before {
+.content1 li:before {
     content: "\f19d"; /* Unicode for graduation cap icon */
     font-family: 'Font Awesome 5 Free';
     position: absolute;
@@ -469,11 +469,11 @@ span {
     color: #00eeff; /* Warna ikon */
 }
 
-.content-education span {
+.content1 span {
     color: #fff;
 }
 
-.content-education img {
+.content1 img {
     max-width: 100%; /* Membuat gambar tidak melebihi lebar kontainer */
     height: auto; /* Membuat gambar tetap proporsional */
     display: block; /* Menghilangkan whitespace di bawah gambar */
