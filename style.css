@@ -1,0 +1,606 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+/* Root variables */
+:root {
+    --bg-color: linear-gradient(135deg, #0D0D0D, #323946);
+    --second-bg-color: linear-gradient(135deg, #0D0D0D, #323946);
+    --text-color: #ffffff; /* Ubah warna teks menjadi putih */
+    --main-color: #00eeff; /* Ganti warna utama menjadi biru-hijau */
+}
+
+/*section hero*/
+.hero {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 20px; /* Menambah ruang di bagian bawah untuk garis */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00c4e0;
+}
+
+.hero-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.hero-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.hero-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.hero-content h2 {
+    text-align: left;
+    line-height: 1.2;
+    margin-bottom: 100px;
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    color: var(--text-color); /* Ubah warna teks untuk kontras dengan latar belakang */
+}
+
+.hero::before,
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    background-color: var(--main-color); /* Warna garis */
+    transition: width 0.3s ease; /* Animasi lebar garis */
+}
+
+.hero::before {
+    left: 0;
+}
+
+.hero::after {
+    right: 0;
+}
+
+.hero:hover::before,
+.hero:hover::after {
+    width: 50%; /* Lebar garis saat dihover */
+    transition-delay: 0.2s; /* Tambahkan delay untuk animasi */
+}
+
+/* Social media icons */
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--bg-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Base styles */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.7rem;
+    margin-left: 2rem; /* Ubah margin menjadi 2rem */
+    transition: color 0.3s ease; /* Tambah efek transisi */
+}
+
+.navbar a:hover, 
+.navbar a.active {
+    color: var(--main-color); /* Ubah warna saat dihover menjadi warna utama */
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+/* Home section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 50px; /* Menambah ruang di bagian bawah untuk garis */
+    background-color: var(--second-bg-color);
+}
+
+.home-img img {
+    width: 28vw;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+#heading-home {
+    font-size: 3.2rem;
+    margin-bottom: 30px; /* Beri ruang tambahan di bawah heading */
+    text-align: left; /* Pusatkan teks heading */
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content h2 {
+    text-align: left;
+    line-height: 1.2;
+    margin-bottom: 100px;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    color: var(--text-color); /* Ubah warna teks untuk kontras dengan latar belakang */
+}
+
+.home::before,
+.home::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    background-color: var(--main-color); /* Warna garis */
+    transition: width 0.3s ease; /* Animasi lebar garis */
+}
+
+.home::before {
+    left: 0;
+}
+
+.home::after {
+    right: 0;
+}
+
+.home:hover::before,
+.home:hover::after {
+    width: 50%; /* Lebar garis saat dihover */
+    transition-delay: 0.2s; /* Tambahkan delay untuk animasi */
+}
+
+.home-edu {
+    position: sticky;
+    top: 20px;
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Animasi semua perubahan selama 0.3 detik dengan fungsi timing ease */
+}
+
+/* Menambahkan efek hover */
+.home-edu:hover {
+    transform: translateY(-5px); /* Menggeser elemen ke atas saat dihover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Meningkatkan intensitas shadow saat dihover */
+    background-color: var(--second-bg-color); /* Ubah warna latar belakang saat dihover */
+    color: white; /* Ubah warna teks saat dihover untuk kontras dengan latar belakang */
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.education {
+    padding: 100px 0;
+    background-color: var(--second-bg-color); /* Ganti dengan warna latar belakang yang diinginkan */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    max-height: 200px; /* Mengatur tinggi maksimum kotak teks */
+    overflow: auto; /* Menambahkan overflow auto agar konten yang melebihi tinggi maksimum dapat digulir */
+    transition: transform 0.5s ease-out;
+    background-color: #323946 !important; /* Menetapkan warna latar belakang dengan nilai '#323946' */
+}
+
+.education-item p#edu-year {
+    text-align: left; /* Memindahkan teks ke kiri */
+    color: var(--main-color); /* Contoh properti CSS */
+}
+
+/* Mengatur warna teks untuk semua elemen <p> di dalam .education-item */
+.education-item p#edu {
+    color: var(--main-color);
+}
+
+
+/* Animasi */
+.education-item:hover {
+    transform: translateY(-10px);
+} 
+
+/* Achievement Section */
+#achievement {
+    padding: 80px 0;
+    background-color: var(--bg-color);
+    text-align: center;
+    padding-bottom: 50px; /* Menambah ruang di bagian bawah untuk garis */
+    position: relative; /* Menjadikan posisi relatif agar bisa mengatur garis */
+    overflow: hidden; /* Menyembunyikan garis di luar kontainer */
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+
+}
+
+.section-title p{
+    color: #00eeff;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-10px);
+}
+
+.icon-container {
+    background-color: #00eeff;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/*Education*/
+.content {
+    margin-top: 20px;
+}
+
+.content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.education-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.education-item p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.content-education {
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+.content-education h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--main-color); /* Ubah warna judul */
+}
+
+.content-education ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-education li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 40px; /* Sesuaikan jarak dari ikon */
+    font-size: 16px; /* Ukuran font */
+    color: #fff; /* Warna teks */
+}
+
+.content-education li:before {
+    content: "\f19d"; /* Unicode for graduation cap icon */
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px; /* Ukuran ikon */
+    color: #00eeff; /* Warna ikon */
+}
+
+.content-education span {
+    color: #fff;
+}
+
+.content-education img {
+    max-width: 100%; /* Membuat gambar tidak melebihi lebar kontainer */
+    height: auto; /* Membuat gambar tetap proporsional */
+    display: block; /* Menghilangkan whitespace di bawah gambar */
+    margin: 0 auto 15px; /* Memberikan margin bawah dan auto untuk centering */
+    border-radius: 10px; /* Menambahkan sudut bulat pada gambar */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan shadow */
+}
+
+.achievement::before,
+.achievement::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    background-color: var(--main-color); /* Warna garis */
+    transition: width 0.3s ease; /* Animasi lebar garis */
+}
+
+.achievement::before {
+    left: 0;
+}
+
+.achievement::after {
+    right: 0;
+}
+
+.achievement:hover::before,
+.achievement:hover::after {
+    width: 50%; /* Lebar garis saat dihover */
+    transition-delay: 0.2s; /* Tambahkan delay untuk animasi */
+}
+
+.achievement::before,
+.achievement::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    background-color: var(--main-color); /* Warna garis */
+    transition: width 0.3s ease; /* Animasi lebar garis */
+}
+
+.achievement::before {
+    left: 0;
+}
+
+.achievement::after {
+    right: 0;
+}
+
+.achievement:hover::before,
+.achievement:hover::after {
+    width: 50%; /* Lebar garis saat dihover */
+    transition-delay: 0.2s; /* Tambahkan delay untuk animasi */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.projects {
+    background-color: var(--bg-color);
+    padding: 50px 0;
+    text-align: center;
+    padding-bottom: 50px; /* Menambah ruang di bagian bawah untuk garis */
+}
+
+.project-item {
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ubah bayangan */
+    margin-bottom: 30px; /* Tambahkan margin bottom */
+    padding: 20px;
+    transition: transform 0.3s ease; /* Efek transisi saat hover */
+}
+
+.project-item:hover {
+    transform: translateY(-5px); /* Menggeser item sedikit ke atas saat hover */
+}
+
+.project-item h3 {
+    margin-top: 0;
+    font-size: 24px; /* Ukuran judul */
+    margin-bottom: 10px; /* Tambahkan margin bottom */
+    color: var(--main-color); /* Ubah warna judul */
+}
+
+.project-item p {
+    margin-bottom: 20px;
+    font-size: 16px; /* Ukuran teks */
+    text-align: left;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Untuk mendukung scroll pada browser mobile */
+    padding-bottom: 20px; /* Tambahkan ruang di bagian bawah carousel */
+}
+
+.slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-right: 10px; /* Jarak antar gambar */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek elevasi */
+    transition: transform 0.3s ease; /* Efek transisi saat hover */
+    cursor: pointer; /* Mengubah kursor menjadi tanda untuk menunjukkan elemen dapat diinteraksi */
+}
+
+.slide:hover {
+    transform: translateY(-5px); /* Menggeser slide sedikit ke atas saat hover */
+}
+
+.slide img {
+    border-radius: 10px; /* Sudut bulat pada gambar */
+    width: 100%; /* Gambar mengisi lebar slide */
+    height: 250px; /* Mengatur tinggi sesuai proporsi gambar */
+}
+
+
