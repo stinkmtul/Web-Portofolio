@@ -358,14 +358,14 @@ span {
 .timeline {
     display: flex;
     justify-content: space-between;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .timeline-item {
     flex: 1;
     text-align: left;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--second-bg-color);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
